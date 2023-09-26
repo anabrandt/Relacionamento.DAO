@@ -16,7 +16,7 @@ public class VeiculoDao {
     public void inserir(Veiculo veiculo) throws SQLException{
         var con = DriverManager.getConnection(URL, USER, PASS);
 
-        var ps = con.prepareStatement("INSERT INTO veiculos VALUES (?, ?, ?, ?)");
+        var ps = con.prepareStatement("INSERT INTO TBL_CONTATOS_RM552283 VALUES (?, ?, ?, ?)");
         ps.setString(1, veiculo.getMarca());
         ps.setString(2, veiculo.getModelo());
         ps.setInt(3, veiculo.getAno());
@@ -29,7 +29,7 @@ public class VeiculoDao {
     public List<Veiculo> buscarTodos() throws SQLException{
         var veiculos = new ArrayList<Veiculo>();
         var con = DriverManager.getConnection(URL, USER, PASS);
-        var rs = con.createStatement().executeQuery("SELECT * FROM veiculos");
+        var rs = con.createStatement().executeQuery("TBL_CONTATOS_RM552283");
 
         while(rs.next()){
             veiculos.add(new Veiculo(
@@ -39,9 +39,7 @@ public class VeiculoDao {
                 rs.getBigDecimal("valor")
             ));
         }
-
         con.close();
         return veiculos;
     }
-
 }

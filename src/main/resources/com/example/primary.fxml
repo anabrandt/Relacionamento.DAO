@@ -12,20 +12,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.example.PrimaryController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFF5E0;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimaryController">
   <tabs>
-    <Tab text="Veículos">
+    <Tab text="Contatos">
          <content>
             <BorderPane prefHeight="200.0" prefWidth="200.0">
                <left>
                   <VBox prefHeight="371.0" prefWidth="203.0" spacing="10.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Label text="Cadastrar Veículo">
+                        <Label text="Cadastrar Contato" textFill="#c70039">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Label text="Marca">
+                        <Label prefHeight="20.0" prefWidth="125.0" text="Adicionar Número">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -49,7 +49,7 @@
                            </font>
                         </Label>
                         <TextField fx:id="txtValor" layoutX="20.0" layoutY="160.0" />
-                        <Button mnemonicParsing="false" onAction="#cadastrar" prefHeight="33.0" prefWidth="183.0" text="cadastrar" />
+                        <Button mnemonicParsing="false" onAction="#cadastrar" prefHeight="33.0" prefWidth="183.0" style="-fx-background-color: #94C330;" text="cadastrar" textFill="WHITE" />
                      </children>
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -71,7 +71,7 @@
                </center>
             </BorderPane>
          </content></Tab>
-    <Tab text="Clientes">
+    <Tab text="Grupos">
          <content>
             <Label text="Cadastro de clientes" />
          </content></Tab>
